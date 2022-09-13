@@ -24,23 +24,42 @@
                         <li class="nav-item dropdown">
                           <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  Categories  </a>
                             <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#"> Dropdown item 1 </a></li>
-                            <li><a class="dropdown-item" href="#"> Dropdown item 2 &raquo; </a>
+                            @foreach($categories as $category)
+                            <li>
+                                <a class="dropdown-item" href="#"> {!! $category->name !!} </a>
+                                <ul class="submenu dropdown-menu">
+                                @foreach($category->subCategories() as $subCategory)
+                                  <li>
+                                    <a class="dropdown-item" href="#">{!! $subCategory->name !!}</a>
+                                    <ul class="submenu dropdown-menu">
+                                    @foreach($subCategory->topics as $topic)
+                                      <li><a class="dropdown-item" href="#">{!! $topic->name !!}</a></li>
+                                    @endforeach
+                                    </ul>
+                                  </li>
+                                @endforeach
+                                </ul>
+                            </li>
+                            @endforeach
+                            <!-- <li><a class="dropdown-item" href="#"> Dropdown item 2 &raquo; </a>
                                 <ul class="submenu dropdown-menu">
                                 <li><a class="dropdown-item" href="#">Submenu item 1</a></li>
                                 <li><a class="dropdown-item" href="#">Submenu item 2</a></li>
-                                <li><a class="dropdown-item" href="#">Submenu item 3 &raquo; </a>
+                                <li>
+                                  <a class="dropdown-item" href="#">Submenu item 3 &raquo; </a>
                                   <ul class="submenu dropdown-menu">
                                     <li><a class="dropdown-item" href="#">Multi level 1</a></li>
                                     <li><a class="dropdown-item" href="#">Multi level 2</a></li>
-                                </ul>
+                                  </ul>
                                 </li>
+
+
                                 <li><a class="dropdown-item" href="#">Submenu item 4</a></li>
                                 <li><a class="dropdown-item" href="#">Submenu item 5</a></li>
                               </ul>
                             </li>
                             <li><a class="dropdown-item" href="#"> Dropdown item 3 </a></li>
-                            <li><a class="dropdown-item" href="#"> Dropdown item 4 </a>
+                            <li><a class="dropdown-item" href="#"> Dropdown item 4 </a> -->
                             </ul>
                         </li>
                       </ul>

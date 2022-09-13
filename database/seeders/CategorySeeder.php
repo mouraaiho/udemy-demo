@@ -28,17 +28,7 @@ class CategorySeeder extends Seeder
         Category::create(['name'=>'Health &amp; Fitness','slug' =>'health-fitness']);
         Category::create(['name'=>'Music','slug' =>'music']);
         Category::create(['name'=>'Teaching &amp; Academics','slug' =>'teaching-academics']);
-        Category::create(['name'=>'Fitness','slug' =>'fitness']);
-        Category::create(['name'=>'General Health','slug' =>'general-health']);
-        Category::create(['name'=>'Sports','slug' =>'sports']);
-        Category::create(['name'=>'Nutrition &amp; Diet','slug' =>'nutrition-diet']);
-        Category::create(['name'=>'Yoga','slug' =>'yoga']);
-        Category::create(['name'=>'Mental Health','slug' =>'mental Health']);
-        Category::create(['name'=>'Martial Arts &amp; Self Defense','slug' =>'martial-arts-self-defense']);
-        Category::create(['name'=>'Safety &amp; First Aid','slug' =>'safety-first-aid']);
-        Category::create(['name'=>'Dance','slug' =>'dance']);
-        Category::create(['name'=>'Meditation','slug' =>'meditation']);
-        Category::create(['name'=>'Other Health &amp; Fitness','slug' =>'other-health-fitness']);
+        
 
         $category = Category::find(1);
    
