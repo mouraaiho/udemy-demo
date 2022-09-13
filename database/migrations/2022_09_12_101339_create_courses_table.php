@@ -18,10 +18,10 @@ return new class extends Migration
             $table->string('title')->unique();
             $table->string('slug')->unique();
             $table->string('short-description'); 
-            $table->string('language');
             $table->text('long-description'); 
             $table->float('price');
             $table->integer('status')->nullable()->default(0); // draft or public 
+            $table->foreignId('language_id')->constrained('languages')->onDelete('cascade');
             $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
             $table->foreignId('topic_id')->constrained('topics')->onDelete('cascade');
             $table->timestamps();

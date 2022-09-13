@@ -9,6 +9,12 @@ class Category extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'name',
+        'slug',
+        'parent_category_id',
+    ];
+
     public function subCategories()
     {
         return Category::where('parent_category_id',$this->id)->get();

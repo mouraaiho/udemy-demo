@@ -13,6 +13,13 @@
 .pl-2{
     padding-left: 1.5rem;
 }
+
+.plr-0{
+    padding-left: 0px!important;
+    padding-right: 0px!important;
+}
+
+
 .top-header{
     padding: 0.5em 0.5em 0em 0.5em;
     box-shadow: 0 2px 4px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 8%)
@@ -73,8 +80,8 @@
 
 .billboard-content-box{
     position: absolute;
-    left: 4em;
-    top: 4em;
+    left: 4%;
+    top: 14%;
     width: 26rem;
     background-color: #fff;
     box-shadow: 0 2px 4px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 8%);
@@ -457,15 +464,42 @@
 .navbar-dark .navbar-nav .nav-link{
     color:#000;
 }
- 
 .dropdown-menu[data-bs-popper]{
-    top:121%;
-    min-height: 30rem;
+    top: 124%;;
+}
+.dropdown-menu{
+    min-height: 35rem;
+    min-width: 18rem;
     border-radius: 0px;
 }
 
+.dropdown-menu svg{
+    float: right;
+}
+
+.dropdown-item span{
+    width: 80%;
+}
+.dropdown-item:focus, .dropdown-item:hover{
+    background-color: #fff;
+    color: #a435f0;
+}
+
+.dropdown-item:focus, .popular-topic:hover{
+    background-color: #fff;
+    color: #000;
+    cursor: auto;
+}
+
+.navbar-expand .navbar-nav{
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.popular-topic{
+    padding-left: 15px;
+}
  
-/* ============ desktop view ============ */
 @media all and (min-width: 992px) {
     
 	.nav-item .submenu{ 
@@ -482,12 +516,9 @@
 	.dropdown-menu > li:hover{ background-color: #f1f1f1 }
 	.dropdown-menu > li:hover > .submenu{ display: block; }
 }	
-/* ============ desktop view .end// ============ */
 
-/* ============ small devices ============ */
 @media (max-width: 991px) {
   .dropdown-menu .dropdown-menu{
       margin-left:0.7rem; margin-right:0.7rem; margin-bottom: .5rem;
   }
 }	
-/* ============ small devices .end// ============ */
