@@ -14,5 +14,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/',[App\Http\Controllers\HomeController::class, 'home'])->name('home');
-
+Route::get('/load-content',[App\Http\Controllers\AjaxController::class, 'loadContent'])->name('ajax.loadContent');
 

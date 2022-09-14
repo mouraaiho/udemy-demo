@@ -14,14 +14,14 @@ return new class extends Migration
     public function up()
     {
         Schema::create('reviews', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->string('content'); 
             $table->integer('rating')->nullable()->default(0);
             $table->integer('status')->nullable()->default(0);
             $table->integer('like')->nullable()->default(0);
             $table->integer('dislike')->nullable()->default(0);
-            $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
-            $table->foreignId('course_id')->constrained('courses')->onDelete('cascade');
+            $table->bigInteger('user_id')->unsigned();
+            $table->bigInteger('course_id')->unsigned();
             $table->timestamps();
         });
     }

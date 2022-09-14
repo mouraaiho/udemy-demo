@@ -14,9 +14,9 @@ class CreateCourseLevelTable extends Migration
     public function up()
     {
         Schema::create('course_level', function (Blueprint $table) {
-            $table->id();
-            $table->foreignId('course_id')->constrained('courses')->onDelete('cascade');
-            $table->foreignId('level_id')->constrained('levels')->onDelete('cascade');
+            $table->increments('id');
+            $table->bigInteger('course_id')->unsigned();
+            $table->bigInteger('level_id')->unsigned();
             $table->timestamps();
         });
     }

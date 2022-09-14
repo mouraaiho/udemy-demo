@@ -97,7 +97,7 @@ class CategorySeeder extends Seeder
         Category::create(['name'=>'Career Development','slug' =>'career-development' , 'parent_category_id' => $category->id]);
         Category::create(['name'=>'Parenting &amp; Relationships','slug' =>'parenting-relationships' , 'parent_category_id' => $category->id]);
         Category::create(['name'=>'Happiness','slug' =>'happiness' , 'parent_category_id' => $category->id]);
-        Category::create(['name'=>'Esoteric Practices','slug' =>'esoteric-practices' , 'parent_category_id' => $category->id]);
+        Category::create(['name'=>'Esoteric Practices','slug' =>'esoteric-practices-1' , 'parent_category_id' => $category->id]);
         Category::create(['name'=>'Religion &amp; Spirituality','slug' =>'religion-spirituality' , 'parent_category_id' => $category->id]);
         Category::create(['name'=>'Personal Brand Building','slug' =>'personal-brand-building' , 'parent_category_id' => $category->id]);
         Category::create(['name'=>'Creativity','slug' =>'creativity' , 'parent_category_id' => $category->id]);

@@ -46,12 +46,12 @@ class TopicSeeder extends Seeder
         Topic::create(['name'=>'Mobile App Development', 'slug'=>'mobile-app-development', 'category_id' => $category->id]);
 
         $category = Category::find(17);
-        Topic::create(['name'=>'Python', 'slug'=>'python', 'category_id' => $category->id]);
+        Topic::create(['name'=>'Python', 'slug'=>'python-1', 'category_id' => $category->id]);
         Topic::create(['name'=>'Java', 'slug'=>'java', 'category_id' => $category->id]);
         Topic::create(['name'=>'C#', 'slug'=>'c-sharp', 'category_id' => $category->id]);
-        Topic::create(['name'=>'React', 'slug'=>'react', 'category_id' => $category->id]);
+        Topic::create(['name'=>'React', 'slug'=>'react-1', 'category_id' => $category->id]);
         Topic::create(['name'=>'C++', 'slug'=>'c-plus-plus', 'category_id' => $category->id]);
-        Topic::create(['name'=>'JavaScript', 'slug'=>'javascript', 'category_id' => $category->id]);
+        Topic::create(['name'=>'JavaScript', 'slug'=>'javascript-1', 'category_id' => $category->id]);
         Topic::create(['name'=>'Go (programming language)', 'slug'=>'go-programming-language', 'category_id' => $category->id]);
         Topic::create(['name'=>'C (programming language)', 'slug'=>'c-programming-language', 'category_id' => $category->id]);
         Topic::create(['name'=>'Spring Framework', 'slug'=>'spring-framework', 'category_id' => $category->id]);

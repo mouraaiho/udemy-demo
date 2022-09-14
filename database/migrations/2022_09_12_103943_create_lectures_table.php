@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('lectures', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->string('name');
             $table->string('description')->nullable();
             $table->string('type'); //video or article or other ressources file
@@ -22,7 +22,7 @@ return new class extends Migration
             $table->integer('is_downloadable');
             $table->integer('duration');
             $table->integer('status'); // prive or public (preview)
-            $table->foreignId('section_id')->constrained('sections')->onDelete('cascade');
+            $table->bigInteger('section_id')->unsigned();
             $table->timestamps();
         });
     }

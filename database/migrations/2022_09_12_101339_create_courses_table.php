@@ -14,16 +14,16 @@ return new class extends Migration
     public function up()
     {
         Schema::create('courses', function (Blueprint $table) {
-            $table->id();
-            $table->string('title')->unique();
+            $table->increments('id');
+            $table->string('title');
             $table->string('slug')->unique();
             $table->string('short-description'); 
             $table->text('long-description'); 
             $table->float('price');
             $table->integer('status')->nullable()->default(0); // draft or public 
-            $table->foreignId('language_id')->constrained('languages')->onDelete('cascade');
-            $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
-            $table->foreignId('topic_id')->constrained('topics')->onDelete('cascade');
+            $table->bigInteger('language_id')->unsigned();
+            $table->bigInteger('user_id')->unsigned();
+            $table->bigInteger('topic_id')->unsigned();
             $table->timestamps();
         });
     }

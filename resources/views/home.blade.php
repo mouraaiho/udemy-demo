@@ -11,7 +11,97 @@
 </head>
 <body>
     <header class="top-header">
-        <div class="row">
+        <div class="row d-flex d-md-none">
+            <div class="col  pt-2">
+              <div class="wrapper">
+                <nav>
+                  <input type="checkbox" id="menu" name="menu" class="m-menu__checkbox">
+                  <label class="m-menu__toggle" for="menu">
+                    <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="butt" stroke-linejoin="arcs"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                  </label>
+                  <label class="m-menu__overlay Scrollable" for="menu"></label>
+                  <div class="m-menu Scrollable">
+                    <div class="m-menu__header">
+                      <label class="m-menu__toggle" for="menu">
+                        <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="butt" stroke-linejoin="arcs">
+                          <line x1="18" y1="6" x2="6" y2="18"></line>
+                          <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                      </label>
+                      <span>MENU</span>
+                    </div>
+                    <ul>
+                    @foreach($categories as $category)
+                      <li>
+                        <label class="a-label__chevron" for="item-2">{!! $category->name !!}</label>
+                        <input type="checkbox" id="item-2" name="item-2" class="m-menu__checkbox">
+                        <div class="m-menu">
+                          <div class="m-menu__header">
+                            <label class="m-menu__toggle" for="item-2">
+                              <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="butt" stroke-linejoin="arcs">
+                                <path d="M19 12H6M12 5l-7 7 7 7"/>
+                              </svg>
+                            </label>
+                            <span>{!! $category->name !!}</span>
+                          </div>
+                          <ul>
+                          @foreach($category->subCategories() as $subCategory)
+                            <li>
+                              <label class="a-label__chevron" for="item-2-3">{!! $subCategory->name !!}</label>
+                              <input type="checkbox" id="item-2-3" name="item-2" class="m-menu__checkbox">
+                              <div class="m-menu">
+                                <div class="m-menu__header">
+                                  <label class="m-menu__toggle" for="item-2-3">
+                                    <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="butt" stroke-linejoin="arcs">
+                                      <path d="M19 12H6M12 5l-7 7 7 7"/>
+                                    </svg>
+                                  </label>
+                                  <span>Popular topics</span>
+                                </div>
+                                <ul>
+                                    @foreach($subCategory->topics as $topic)
+                                      <li><label>{!! $topic->name !!}</label></li>
+                                    @endforeach
+                                </ul>                
+                            </li>
+                            @endforeach
+                        </div>
+                      </li>
+                      @endforeach
+                    </ul>  
+                  </div>
+                </nav>
+              </div>
+            </div>
+            <div class="col  pt-2">
+              <img src="http://127.0.0.1:8000/images/logo-udemy.svg" alt="Udemy" width="91" height="34"></a>
+            </div>
+            <div class="col-2">
+                  <nav class="navbar navbar-expand bg-white">
+                    <div class="container-fluid">
+                      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path>
+                                </svg>
+                            </a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
+                                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                                </svg>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </nav>
+            </div>
+        </div>
+        <div class="row d-none d-md-flex">
             <div class="col col-auto">
               <nav class="navbar navbar-expand-lg navbar-dark bg-white">
                 <div class="container-fluid">
@@ -19,11 +109,11 @@
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav"  aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse" id="main_nav">
+                    <div class="collapse navbar-collapse">
                       <ul class="navbar-nav">
                         <li class="nav-item dropdown">
                           <a class="nav-link" id="categories-menu" href="#" data-bs-toggle="dropdown">  Categories  </a>
-                            <ul class="dropdown-menu main-menu">
+                            <ul class="dropdown-menu main-menu" id="main_nav">
                             @foreach($categories as $category)
                             <li>
                                 <a class="dropdown-item" href="#"><span>{!! $category->name !!}</span><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
@@ -69,7 +159,7 @@
                     </form>
                 </div>
             </div>
-            <div class="col col-md-4 col-lg-6 col-xl-5 col-xxl-4 p-0">
+            <div class="col col-md-4 col-lg-6 col-xl-5 col-xxl-5 p-0">
                 <nav class="navbar navbar-expand bg-white">
                     <div class="container-fluid">
                       <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -82,7 +172,7 @@
                           </li>
                           <li class="nav-item">
                             <a class="nav-link" href="#">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
                                     <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
                                 </svg>
                             </a>
@@ -3701,10 +3791,10 @@
     <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('js/swiper-bundle.min.js') }}"></script>
     
-    <script src="https://unpkg.com/@popperjs/core@2"></script>
-    <script src="https://unpkg.com/tippy.js@6"></script>
+    <script src="{{ asset('js/popper.min.js') }}"></script>
+    <script src="{{ asset('js/tippy-bundle.umd.min.js') }}"></script>
     <script>
-      var url = "http://127.0.0.1:8000/template.html";
+      var ajax_url = "{{ route('ajax.loadContent')}}";
     </script>
     <script src="{{ asset('js/script.js') }}"></script>
 </body>
