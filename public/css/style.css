@@ -174,7 +174,7 @@ a {
 }
 
 .swiper-button-next, .swiper-button-prev{
-    background-color: #000;
+    background-color: #19da81;
     color: #fff;
     font-weight: bolder;
     border-radius: 50px;
@@ -662,4 +662,9 @@ nav .m-menu__checkbox:checked ~ .m-menu {
 .wrapper {
     margin: 0 auto;
     overflow: hidden;
+}
+
+
+.btn:first-child:hover, :not(.btn-check)+.btn:hover {
+    background-color: #c1247f;
 }

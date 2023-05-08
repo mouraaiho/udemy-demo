@@ -105,7 +105,7 @@
             <div class="col col-auto">
               <nav class="navbar navbar-expand-lg navbar-dark bg-white">
                 <div class="container-fluid">
-                  <a class="navbar-brand" href="#"><img src="{{ asset('images/logo-udemy.svg') }}" alt="Udemy" width="91" height="34"></a>
+                  <a class="navbar-brand" href="#"><img src="{{ asset('images/udemy-business-logo.svg') }}" alt="Udemy" width="120" height="34"></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav"  aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -3542,35 +3542,35 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-3 cat-img-wrapper">
+          <div class="col-6 cat-img-wrapper">
             <img src="{{ asset('images/categories/lohp-category-design-v2.jpg') }}" class="img-fluid  cat-img" alt="">
             <h3 class="category-name">Design</h3>
           </div>
-          <div class="col-3 cat-img-wrapper">
+          <div class="col-6 cat-img-wrapper">
             <img src="{{ asset('images/categories/lohp-category-development-v2.jpg') }}" class="img-fluid cat-img" alt="">
             <h3 class="category-name">Development</h3>
           </div>
-          <div class="col-3 cat-img-wrapper">
+          <div class="col-6 cat-img-wrapper">
             <img src="{{ asset('images/categories/lohp-category-marketing-v2.jpg') }}" class="img-fluid cat-img" alt="">
             <h3 class="category-name">Marketing</h3>
           </div>
-          <div class="col-3 cat-img-wrapper">
+          <div class="col-6 cat-img-wrapper">
             <img src="{{ asset('images/categories/lohp-category-it-and-software-v2.jpg') }}" class="img-fluid cat-img" alt="">
             <h3 class="category-name">IT and Software</h3>
           </div>
-          <div class="col-3 cat-img-wrapper">
+          <div class="col-6 cat-img-wrapper">
             <img src="{{ asset('images/categories/lohp-category-personal-development-v2.jpg') }}" class="img-fluid cat-img" alt="">
             <h3 class="category-name">Personal Development</h3>
           </div>
-          <div class="col-3 cat-img-wrapper">
+          <div class="col-6 cat-img-wrapper">
             <img src="{{ asset('images/categories/lohp-category-business-v2.jpg') }}" class="img-fluid cat-img" alt="">
             <h3 class="category-name">Business</h3>
           </div>
-          <div class="col-3 cat-img-wrapper">
+          <div class="col-6 cat-img-wrapper">
             <img src="{{ asset('images/categories/lohp-category-personal-development-v2.jpg') }}" class="img-fluid cat-img" alt="">
             <h3 class="category-name">Photography</h3>
           </div>
-          <div class="col-3 cat-img-wrapper">
+          <div class="col-6 cat-img-wrapper">
             <img src="{{ asset('images/categories/lohp-category-music-v2.jpg') }}" class="img-fluid cat-img" alt="">
             <h3 class="category-name">Music</h3>
           </div>
